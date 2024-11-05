@@ -10,6 +10,5 @@ namespace EtulasAPI.Data
         }
 
         public DbSet<Hospital> Hospitals { get; set; }
-        public DbSet<Patient> Patients { get; set; }
     }
 }

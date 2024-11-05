@@ -38,11 +38,8 @@ namespace EtulasAPI.Services
             var existingHospital = await _context.Hospitals.FindAsync(hospital.Id);
             if (existingHospital == null)
             {
-                // Hospital não encontrado
                 throw new KeyNotFoundException("Hospital não encontrado.");
             }
-
-            // Atualizar os campos necessários
             existingHospital.Name = hospital.Name;
             existingHospital.Capacity = hospital.Capacity;
             existingHospital.OccupiedBeds = hospital.OccupiedBeds;
@@ -55,12 +52,10 @@ namespace EtulasAPI.Services
             {
                 if (!await HospitalExists(hospital.Id))
                 {
-                    // Se o hospital não existe mais após a exceção
                     throw new KeyNotFoundException("Hospital não encontrado durante a atualização.");
                 }
                 else
                 {
-                    // Erro de concorrência
                     throw;
                 }
             }
@@ -70,17 +65,12 @@ namespace EtulasAPI.Services
         public async Task DeleteHospitalAsync(int id)
         {
             var hospital = await _context.Hospitals.FindAsync(id);
-
-            // Verifica se o hospital foi encontrado
             if (hospital == null)
             {
-                return; // Retorna sem fazer nada se o hospital não for encontrado
+                return;
             }
 
-            // Recarrega os dados do hospital para garantir que a versão mais recente seja usada
             _context.Entry(hospital).Reload();
-
-            // Tenta excluir o hospital
             try
             {
                 _context.Hospitals.Remove(hospital);
@@ -88,8 +78,6 @@ namespace EtulasAPI.Services
             }
             catch (DbUpdateConcurrencyException)
             {
-                // Lidar com o conflito de concorrência (exibir mensagem ao usuário etc.)
-                // Você pode implementar sua própria lógica de tratamento de conflito aqui
                 throw new Exception("O registro do hospital foi modificado por outro usuário. A exclusão não foi realizada.");
             }
         }

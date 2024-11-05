@@ -11,6 +11,6 @@ namespace EtulasAPI.Interfaces
         Task<Hospital> AddHospitalAsync(Hospital hospital);
         Task UpdateHospitalAsync(Hospital hospital);
         Task DeleteHospitalAsync(int id);
-        Task<bool> HospitalExists(int id); // Adicione este método à interface
+        Task<bool> HospitalExists(int id);
     }
 }
