@@ -36,6 +36,14 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+      },
+      "EtulasAPI": {
+        "commandName": "Project",
+        "launchBrowser": true,
+        "environmentVariables": {
+          "GoogleOAuthClientId": "209111953268-nr3fv1oh2j1go18sb058u5vjtbdit16d.apps.googleusercontent.com",
+          "GoogleOAuthClientSecret": "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"
+        }
+      }
     }
-  }
-}
