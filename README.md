@@ -44,7 +44,7 @@ A documentação inclui descrições claras dos endpoints e modelos de dados.
      ```json
      {
        "ConnectionStrings": {
-         "DefaultConnection": "User Id=<username>;Password=<password>;Data Source=<datasource>"
+         "OracleDb": "User Id=<username>;Password=<password>;Data Source=<datasource>"
        }
      }
      ```
@@ -56,6 +56,26 @@ A documentação inclui descrições claras dos endpoints e modelos de dados.
    - Execute o comando: `dotnet run`
    - A aplicação estará disponível em `http://localhost:5113`.
 
+## Testes Implementados
+
+A API inclui testes abrangentes para garantir sua confiabilidade:
+
+- **Testes Unitários:** Validação das funcionalidades do `HospitalService` e `AuthService`, incluindo o comportamento esperado ao recuperar, adicionar, atualizar e excluir hospitais.
+- **Testes de Integração:** Os testes de integração validam os endpoints do `HospitalController`, simulando cenários de requisições reais e verificando o comportamento da API.
+- **Testes de Sistema:** Os testes de sistema verificam o funcionamento completo da aplicação, incluindo autenticação via Google e integração com o serviço externo.
+
+Os testes foram implementados utilizando o framework **xUnit**.
+
+## Práticas de Clean Code e SOLID
+
+- **S - Single Responsibility Principle (SRP):** Cada classe tem uma responsabilidade única. Por exemplo, `HospitalService` é responsável pelas operações relacionadas a hospitais, e `AuthService` lida exclusivamente com autenticação.
+- **O - Open/Closed Principle (OCP):** As interfaces (`IHospitalService` e `IAuthService`) permitem a expansão de funcionalidades sem modificar a implementação existente.
+- **L - Liskov Substitution Principle (LSP):** Interfaces como `IHospitalService` permitem que qualquer implementação futura substitua a atual, respeitando o contrato de métodos assíncronos.
+- **I - Interface Segregation Principle (ISP):** Interfaces são definidas para responsabilidades específicas, evitando métodos desnecessários para classes que as implementam.
+- **D - Dependency Inversion Principle (DIP):** A injeção de dependência é usada para injetar `HospitalService` e `AuthService`, facilitando a testabilidade e a flexibilidade.
+
+Além dos princípios SOLID, práticas de **Clean Code** foram aplicadas, como nomes de variáveis e métodos que facilitam a compreensão do código e uso de exceções para tratamento de erros.
+
 ## Integrantes do Grupo
 
 - Eduardo Bezerra – RM: 98890
@@ -63,4 +83,4 @@ A documentação inclui descrições claras dos endpoints e modelos de dados.
 - João Vitor Vicente Benjamin – RM: 98938
 - Silas Henrique da Silva Oliveira – RM: 98965
 
-## Professor espero que reconsidere, pois infelizmente 2 endpoints não funcionaram como deveria, desde ja agradeço
+**Observação:** Professor, caso no Swagger não funcione a chamada para o endpoint de autenticação tente pelo `http://localhost:5113/auth/login`. Desde já, agradecemos a atenção.
