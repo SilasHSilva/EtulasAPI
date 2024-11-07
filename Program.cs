@@ -34,11 +34,6 @@ builder.Services.AddAuthentication(options =>
     options.CallbackPath = "/auth/signin-google"; // Rota para redirecionar após a autenticação
 });
 
-builder.Services.AddHttpClient<IAuthService, AuthService>(client =>
-{
-    client.BaseAddress = new Uri("http://localhost:5113/api/"); // URL do serviço externo
-});
-
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {

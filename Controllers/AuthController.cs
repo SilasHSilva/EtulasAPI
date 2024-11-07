@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-[Route("auth")]
+[Route("/")]
 public class AuthController : ControllerBase
 {
-    [HttpGet("login")]
+    [HttpGet("")]
     public IActionResult Login(string returnUrl = null)
     {
         var redirectUrl = Url.Action(nameof(LoginCallback), "Auth", new { returnUrl });
@@ -21,10 +21,10 @@ public class AuthController : ControllerBase
         var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         if (!result.Succeeded)
         {
-            return RedirectToAction("Login");
+            return RedirectToAction("login");
         }
 
 
-        return LocalRedirect(returnUrl ?? "/");
+        return LocalRedirect(returnUrl ?? "/swagger");
     }
 }

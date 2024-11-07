@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\FIAP\\Segundo Ano\\2º Semestre\\.NET\\EtulasAPI\\EtulasAPI.csproj": {}
+    "C:\\Users\\Silas Henrique\\Desktop\\EtulasAPI-1\\EtulasAPI.csproj": {}
   },
   "projects": {
-    "H:\\FIAP\\Segundo Ano\\2º Semestre\\.NET\\EtulasAPI\\EtulasAPI.csproj": {
+    "C:\\Users\\Silas Henrique\\Desktop\\EtulasAPI-1\\EtulasAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\FIAP\\Segundo Ano\\2º Semestre\\.NET\\EtulasAPI\\EtulasAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Silas Henrique\\Desktop\\EtulasAPI-1\\EtulasAPI.csproj",
         "projectName": "EtulasAPI",
-        "projectPath": "H:\\FIAP\\Segundo Ano\\2º Semestre\\.NET\\EtulasAPI\\EtulasAPI.csproj",
+        "projectPath": "C:\\Users\\Silas Henrique\\Desktop\\EtulasAPI-1\\EtulasAPI.csproj",
         "packagesPath": "C:\\Users\\Silas Henrique\\.nuget\\packages\\",
-        "outputPath": "H:\\FIAP\\Segundo Ano\\2º Semestre\\.NET\\EtulasAPI\\obj\\",
+        "outputPath": "C:\\Users\\Silas Henrique\\Desktop\\EtulasAPI-1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

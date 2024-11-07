@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fFiD0xXzBok=",
+  "dgSpecHash": "zkDh8w0YHmE=",
   "success": true,
-  "projectFilePath": "H:\\FIAP\\Segundo Ano\\2º Semestre\\.NET\\EtulasAPI\\EtulasAPI.csproj",
+  "projectFilePath": "C:\\Users\\Silas Henrique\\Desktop\\EtulasAPI-1\\EtulasAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Silas Henrique\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Silas Henrique\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
@@ -100,7 +100,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'Oracle.ManagedDataAccess 23.5.1' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net8.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "message": "Package 'Oracle.ManagedDataAccess 23.5.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
       "libraryId": "Oracle.ManagedDataAccess",
       "targetGraphs": [
         "net8.0"
